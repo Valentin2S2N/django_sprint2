@@ -4,7 +4,7 @@ from . import views
 
 app_name = 'blog'
 
-# Не забыть добваить это в шаблон html namespace:name
+
 urlpatterns = [
     path('', views.index, name='index'),
     path('posts/<int:id>/', views.post_detail, name='post_detail'),

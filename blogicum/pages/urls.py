@@ -9,6 +9,4 @@ app_name = 'pages'
 urlpatterns = [
     path('about/', views.about, name='about'),
     path('rules/', views.rules, name='rules'),
-    path('travel/', views.travel, name='travel'),
-    path('notmyday/', views.notmyday, name='notmyday'),
 ]

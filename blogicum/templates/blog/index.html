@@ -53,14 +53,14 @@
               Дата: 25 октября 1659 года
             </li>
             <li>
-              Категория: <a href="{% url 'pages:notmyday' %}">not-my-day</a>
+              Категория: <a href="{% url 'blog:category_posts' 'not-my-day' %}">not-my-day</a>
             </li>
           </ul>          
           <!-- Первые 10 слов -->
           <p>
             Всю ночь и весь день шел дождь и дул сильный ...
           </p>
-          <a href="post_detail">Читать полный текст</a>
+          <a href="{% url 'blog:post_detail' 0 %}">Читать полный текст</a>
         </article>
         <hr>
         <article>
@@ -72,14 +72,14 @@
               Дата: 1 октября 1659 года
             </li>
             <li>
-              Категория: <a href="{% url 'pages:notmyday' %}">not-my-day</a>
+              Категория: <a href="{% url 'blog:category_posts' 'not-my-day' %}">not-my-day</a>
             </li>
           </ul>
           <!-- Первые 10 слов -->
           <p>
             Проснувшись поутру, я увидел, что наш корабль сняло с мели ...
           </p>
-          <a href="detail.html">Читать полный текст</a>
+          <a href="{% url 'blog:post_detail' 1 %}">Читать полный текст</a>
         </article>
         <hr>
         <article>
@@ -91,14 +91,14 @@
               Дата: 30 сентября 1659 года.
             </li>
             <li>
-              Категория: <a href="{% url 'pages:travel' %}">travel</a>
+              Категория: <a href="{% url 'blog:category_posts' 'travel' %}">travel</a>
             </li>
           </ul>
           <!-- Первые 10 слов -->
           <p>
             Наш корабль, застигнутый в открытом море страшным штормом, потерпел крушение. ...
           </p>
-          <a href="detail.html">Читать полный текст</a>
+          <a href="{% url 'blog:post_detail' 2 %}">Читать полный текст</a>
         </article>                 
       </div>
     </main>
