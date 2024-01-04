@@ -1,7 +1,7 @@
 from django.shortcuts import render
 from django.http import Http404
 
-posts: list = [
+posts: list[dict] = [
     {
         'id': 0,
         'location': 'Остров отчаянья',
@@ -44,7 +44,7 @@ posts: list = [
     },
 ]
 
-ids = [post['id'] for post in posts]
+ids = [post['id'] for post in posts]  # Надо переделать эту часть под dict.
 
 
 def index(request):
