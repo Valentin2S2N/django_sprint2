@@ -39,7 +39,7 @@
               <a href="{% url 'blog:category_posts' post.category %}"> {{ post.category }}</a>
             </li>
           </ul>
-          {{ post.text }}
+          {{ post.text|linebreaksbr }}
         </article>                
       </div>
     {% endblock %}

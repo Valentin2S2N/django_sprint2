@@ -52,6 +52,7 @@ def index(request):
 
 
 def post_detail(request, post_id):
+    """Если произошла ошибка получения."""
     try:
         post = posts[post_id]
     except IndexError:
