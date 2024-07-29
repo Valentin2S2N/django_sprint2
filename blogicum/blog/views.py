@@ -1,7 +1,7 @@
 from django.shortcuts import render
 from django.http import Http404
 
-posts: list[dict] = [
+posts: list[dict[str]] = [
     {
         'id': 0,
         'location': 'Остров отчаянья',
@@ -55,13 +55,12 @@ def post_detail(request, post_id):
     """Если произошла ошибка получения."""
     try:
         post = posts[post_id]
-    except IndexError:
-        raise Http404
+    except KeyError:
+        raise Http404("Post does not exist")
 
-    context = {
-        'post': post
-    }
-    return render(request, 'blog/detail.html', context)
+    all_posts = posts.values()  # Получаем все значения из словаря
+    return render(request, 'blog/post_detail.html',
+                  {'post': post, 'all_posts': all_posts})
 
 
 def category_posts(request, category_slug):
