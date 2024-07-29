@@ -28,20 +28,19 @@
           </ul>       
         </div> 
       </nav>  
-    {% endblock  %} 
+{% endblock  %} 
 
 
-    {% block title %} 
-      <div class="container py-5"> 
-        <article> 
-          <ul> 
-            <li>Место: {{ post.location }}</li> 
-            <li>Дата: {{post.date }}</li> 
-            <li>Категория: 
-              <a href="{% url 'blog:category_posts' post.category %}"> {{ post.category }}</a> 
-            </li> 
-          </ul> 
-          {{ post.text|linebreaksbr }} 
-        </article>                 
-      </div> 
-    {% endblock %}
+{% block title %} 
+  <div class="container py-5">
+    <article> 
+      <ul> 
+        <li>Место: {{ post.location }}</li> 
+        <li>Дата: {{post.date }}</li> 
+        <li>Категория: 
+            <a href="{% url 'blog:category_posts' post.category %}"> {{ post.category }}</a> 
+        </li> 
+      </ul> 
+    </article>                 
+  </div> 
+{% endblock %}
